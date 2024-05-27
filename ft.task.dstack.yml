@@ -2,7 +2,7 @@ type: task
 
 python: "3.11"
 
-nodes: 2
+nodes: 3
 
 env:
   - FT_MODEL_CONFIG_PATH
