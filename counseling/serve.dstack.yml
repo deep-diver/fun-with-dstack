@@ -1,0 +1,18 @@
+type: service
+
+image: ghcr.io/huggingface/text-generation-inference:2.0.3
+env:
+  - HUGGING_FACE_HUB_TOKEN
+  - MODEL_ID=chansung/mental_health_counseling_v0.1_merged
+commands:
+  - text-generation-launcher --port 8000
+port: 8000
+
+resources:
+  gpu: 1..2
+
+# (Optional) Enable the OpenAI-compatible endpoint
+model:
+  format: tgi
+  type: chat
+  name: chansung/mental_health_counseling_v0.1_merged
